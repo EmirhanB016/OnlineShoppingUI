@@ -11,7 +11,7 @@ using OnlineShoppingUI.Data;
 namespace OnlineShoppingUI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250503123842_InitialCreate")]
+    [Migration("20250503125131_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -35,7 +35,7 @@ namespace OnlineShoppingUI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HistoryRecords");
+                    b.ToTable("HistoryRecords", (string)null);
                 });
 #pragma warning restore 612, 618
         }

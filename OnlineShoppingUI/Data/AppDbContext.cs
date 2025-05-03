@@ -10,6 +10,10 @@ namespace OnlineShoppingUI.Data
 {
     internal class AppDbContext : DbContext
     {
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<HistoryRecord>().ToTable("HistoryRecords");
+        }
         public DbSet<HistoryRecord> HistoryRecords { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -32,7 +32,7 @@ namespace OnlineShoppingUI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HistoryRecords");
+                    b.ToTable("HistoryRecords", (string)null);
                 });
 #pragma warning restore 612, 618
         }
